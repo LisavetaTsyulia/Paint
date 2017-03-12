@@ -41,7 +41,7 @@ public class MenuPan extends JPanel{
         JButton polygon = new JButton("Polygon");
         polygon.addActionListener(new BtnPolygonActionListener());
 
-        //color
+        
         //JButton border = new JButton("Border");
         border = new ColorChooserButton(borderColor, "Border");
         fill = new ColorChooserButton(fillColor, "Fill");
