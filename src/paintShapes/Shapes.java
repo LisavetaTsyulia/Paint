@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public abstract class Shapes {
     private String name;
     private Color borderCol = new Color(98, 19, 82);
-    private Color fillCol = new Color(88, 17, 88);
+    private Color fillCol = new Color(59, 30, 88);
     private ArrayList<Point> coords = new ArrayList<Point>();
 
     public String getName(){
