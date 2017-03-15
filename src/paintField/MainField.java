@@ -3,6 +3,9 @@ package paintField;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 /**
  * Created by lisa on 11.3.17.
  */
@@ -19,9 +22,9 @@ public class MainField {
         frm = new JFrame();
         menuPan = new MenuPan();
         paintPan = new PaintPan();
-        menuPan.setMenu();
-        menuPan.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 2));
-
+        menuPan.setMenu(paintPan);
+        menuPan.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 3));
+        paintPan.addMouseListener(new MyMouseListener(paintPan.coords));
 
         frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frm.getContentPane().add(BorderLayout.WEST, menuPan);

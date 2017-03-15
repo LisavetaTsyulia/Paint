@@ -10,8 +10,11 @@ public abstract class Shapes {
     private String name;
     private Color borderCol = new Color(98, 19, 82);
     private Color fillCol = new Color(59, 30, 88);
-    private ArrayList<Point> coords = new ArrayList<Point>();
+    private ArrayList<Point> coords = new ArrayList<>();
 
+    public void setName(String n){
+        name = n;
+    }
     public String getName(){
         return name;
     }
@@ -30,9 +33,11 @@ public abstract class Shapes {
         return fillCol;
     }
 
-    public void addCoords(Point pt){
-        coords.add(pt);
+    public void setCoords(ArrayList<Point> point){
+        for (Point item : point) coords.add((Point) item.clone());
     }
-
+    public ArrayList<Point> getCoords(){
+        return coords;
+    }
     public abstract void draw(Graphics graphics);
 }

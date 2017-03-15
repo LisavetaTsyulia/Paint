@@ -10,11 +10,20 @@ import java.util.ArrayList;
 public class Polygon extends Shapes {
 
     public void draw(Graphics graphics) {
+        int i = this.getCoords().size();
+        int [] arrX = new int[i];
+        int [] arrY = new int[i];
+        if (i >= 3) {
+            for (int j = 0; j < arrX.length; j++) {
+                arrX[j] =(int) this.getCoords().get(j).getX();
+                arrY[j] =(int) this.getCoords().get(j).getY();
+            }
+        }
         int xPoly[] = {150,250,325,375,450,275,100};
         int yPoly[] = {150,100,125,225,250,375,300};
         graphics.setColor(this.getFillrCol());
-        graphics.fillPolygon(xPoly, yPoly, xPoly.length);
+        graphics.fillPolygon(arrX, arrY, arrX.length);
         graphics.setColor(this.getBorderCol());
-        graphics.drawPolygon( xPoly, yPoly, xPoly.length);
+        graphics.drawPolygon( arrX, arrY, arrX.length);
     }
 }

@@ -18,14 +18,11 @@ public class MenuPan extends JPanel{
     private Color fillColor = new Color(0x1B832A);
     private ColorChooserButton border;
     private ColorChooserButton fill;
+    private PaintPan paintPan;
 
-    public Color getFillColor(){ return fillColor; }
-    public void setFillColor(Color cl){ fillColor = cl; }
 
-    public Color getBorderColor(){ return borderColor; }
-    public void setBorderColor(Color cl){ borderColor = cl; }
-
-    public void setMenu(){
+    public void setMenu(PaintPan pan){
+        paintPan = pan;
         this.setBackground(Color.WHITE);
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
@@ -73,7 +70,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Square listener");
-            ShapesList.getInstance().addShape("square", borderColor, fillColor);
+            ShapesList.getInstance().addShape("square", borderColor, fillColor, paintPan.coords);
+            paintPan.clearCoords();
         }
     }
     class BtnCircleActionListener implements ActionListener{
@@ -81,7 +79,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Circle listener");
-            ShapesList.getInstance().addShape("circle", borderColor, fillColor);
+            ShapesList.getInstance().addShape("circle", borderColor, fillColor,  paintPan.coords);
+            paintPan.clearCoords();
         }
     }
     class BtnLineActionListener implements ActionListener{
@@ -89,7 +88,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Line listener");
-            ShapesList.getInstance().addShape("line", borderColor, fillColor);
+            ShapesList.getInstance().addShape("line", borderColor, fillColor, paintPan.coords);
+            paintPan.clearCoords();
         }
     }
     class BtnPolygonActionListener implements ActionListener{
@@ -97,7 +97,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Polygon listener");
-            ShapesList.getInstance().addShape("polygon", borderColor, fillColor);
+            ShapesList.getInstance().addShape("polygon", borderColor, fillColor, paintPan.coords);
+            paintPan.clearCoords();
         }
     }
 

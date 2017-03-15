@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class ShapesList {
     private static ShapesList ourInstance = new ShapesList();
-    ArrayList<Shapes> list = new ArrayList<Shapes>();
+    ArrayList<Shapes> list = new ArrayList<>();
 
     public static ShapesList getInstance()
     {
@@ -21,14 +21,17 @@ public class ShapesList {
     private ShapesList() {
     }
 
-    public void addShape(String type, Color bcl, Color fcl){
+    public void addShape(String type, Color bcl, Color fcl, ArrayList<Point> pointArrayList){
         Shapes newShape = createShape(type);
         newShape.setBorderCol(bcl);
         newShape.setFillCol(fcl);
+        newShape.setName("Sh" + list.size());
+        newShape.setCoords(pointArrayList);
         list.add(newShape);
+        showList();
     }
     //fabric method
-    protected Shapes createShape(String type){
+    public Shapes createShape(String type){
         Shapes sh = null;
         if (type.equals("line")){
             sh = new Line();
@@ -51,5 +54,13 @@ public class ShapesList {
 
     public void clearList(){
         list.clear();
+    }
+
+    public void showList(){
+        for (Shapes sh:
+             list) {
+            System.out.println(sh.getName());
+            System.out.println(sh.getCoords().toString());
+        }
     }
 }
