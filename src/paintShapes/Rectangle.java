@@ -7,6 +7,7 @@ import java.awt.*;
  */
 public class Rectangle extends Shapes{
     public void draw(Graphics graphics) {
+        Graphics2D graphics2 = setG2D(graphics);
         int i = this.getCoords().size();
         if (i >= 2) {
             Point [] arr = new Point[2];
@@ -15,10 +16,10 @@ public class Rectangle extends Shapes{
             }
             int width = Math.abs(arr[1].x - arr[0].x);
             int heigth = Math.abs(arr[1].y - arr[0].y);
-            graphics.setColor(this.getFillrCol());
-            graphics.fillRect(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
-            graphics.setColor(this.getBorderCol());
-            graphics.drawRect(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
+            graphics2.setColor(this.getFillrCol());
+            graphics2.fillRect(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
+            graphics2.setColor(this.getBorderCol());
+            graphics2.drawRect(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
         }
     }
 }

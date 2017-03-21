@@ -7,14 +7,15 @@ import java.awt.*;
  */
 public class Line extends Shapes {
     public void draw(Graphics graphics) {
-        graphics.setColor(this.getFillrCol());
+        Graphics2D graphics2 = setG2D(graphics);
+        graphics2.setColor(this.getFillrCol());
         int i = this.getCoords().size();
         if (i >= 2) {
             Point [] arr = new Point[2];
             for (int j = 0; j < arr.length; j++) {
                 arr[j] = this.getCoords().get(j);
             }
-            graphics.drawLine(arr[0].x, arr[0].y, arr[1].x, arr[1].y);
+            graphics2.drawLine(arr[0].x, arr[0].y, arr[1].x, arr[1].y);
         }
     }
 }

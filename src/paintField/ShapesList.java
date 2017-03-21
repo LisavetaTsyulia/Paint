@@ -29,7 +29,7 @@ public class ShapesList {
         newShape.setName("Sh" + list.size());
         newShape.setCoords(pointArrayList);
         list.add(newShape);
-        showList();
+        //showList();
     }
 
     public void drawList(Graphics graphics){

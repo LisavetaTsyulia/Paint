@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class Polygon extends Shapes {
 
     public void draw(Graphics graphics) {
+        Graphics2D graphics2 = setG2D(graphics);
         int i = this.getCoords().size();
         int [] arrX = new int[i];
         int [] arrY = new int[i];
@@ -21,9 +22,9 @@ public class Polygon extends Shapes {
         }
         int xPoly[] = {150,250,325,375,450,275,100};
         int yPoly[] = {150,100,125,225,250,375,300};
-        graphics.setColor(this.getFillrCol());
-        graphics.fillPolygon(arrX, arrY, arrX.length);
-        graphics.setColor(this.getBorderCol());
-        graphics.drawPolygon( arrX, arrY, arrX.length);
+        graphics2.setColor(this.getFillrCol());
+        graphics2.fillPolygon(arrX, arrY, arrX.length);
+        graphics2.setColor(this.getBorderCol());
+        graphics2.drawPolygon( arrX, arrY, arrX.length);
     }
 }

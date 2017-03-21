@@ -47,4 +47,9 @@ public abstract class Shapes {
             return b;
         }
     }
+    public Graphics2D setG2D(Graphics g){
+        Graphics2D graphics2 = (Graphics2D) g;
+        graphics2.setStroke(new BasicStroke(3));
+        return graphics2;
+    }
 }
