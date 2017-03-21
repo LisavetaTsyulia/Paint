@@ -3,9 +3,9 @@ package paintShapes;
 import java.awt.*;
 
 /**
- * Created by lisa on 11.3.17.
+ * Created by lisa on 21.3.17.
  */
-public class Circle extends Shapes {
+public class Oval extends Shapes {
     public void draw(Graphics graphics) {
         int i = getCoords().size();
         if (i >= 2) {
@@ -16,11 +16,9 @@ public class Circle extends Shapes {
             int width = Math.abs(arr[1].x - arr[0].x);
             int heigth = Math.abs(arr[1].y - arr[0].y);
             graphics.setColor(this.getFillrCol());
-            graphics.fillOval(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y),
-                                            getMin(width, heigth), getMin(width, heigth));
+            graphics.fillOval(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
             graphics.setColor(this.getBorderCol());
-            graphics.drawOval(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y),
-                                            getMin(width, heigth), getMin(width, heigth));
+            graphics.drawOval(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
         }
     }
 }

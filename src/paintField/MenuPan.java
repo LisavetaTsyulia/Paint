@@ -30,7 +30,9 @@ public class MenuPan extends JPanel{
         //shapes
         JButton square = new JButton("Square");
         square.addActionListener(new BtnSquareActionListener());
-        //square.setIcon(new ImageIcon("yourButtonImage.jpg"));
+        //System.out.println("/images/square.png");
+        square.setIcon(new ImageIcon("/images/square.png"));
+
 
         JButton circle = new JButton("Circle");
         circle.addActionListener(new BtnCircleActionListener());
@@ -38,6 +40,10 @@ public class MenuPan extends JPanel{
         line.addActionListener(new BtnLineActionListener());
         JButton polygon = new JButton("Polygon");
         polygon.addActionListener(new BtnPolygonActionListener());
+        JButton oval = new JButton("Oval");
+        oval.addActionListener(new BtnOvalActionListener());
+        JButton rectangle = new JButton("Rectangle");
+        rectangle.addActionListener(new BtnRectangleActionListener());
 
 
         //JButton border = new JButton("Border");
@@ -50,11 +56,13 @@ public class MenuPan extends JPanel{
         //look
         ArrayList<JButton> buttons = new ArrayList<>();
         buttons.add(border);
-        buttons.add(circle);
         buttons.add(fill);
+        buttons.add(circle);
         buttons.add(line);
         buttons.add(polygon);
         buttons.add(square);
+        buttons.add(oval);
+        buttons.add(rectangle);
         buttons.add(clear);
         Color bg = new Color(68, 120, 182);
         Color pr = new Color(59, 89, 220);
@@ -102,6 +110,26 @@ public class MenuPan extends JPanel{
             fillColor = fill.getSelectedColor();
             System.out.println("Polygon listener");
             fabrica = new FabricaPolygon();
+            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+            paintPan.clearCoords();
+        }
+    }
+    class BtnOvalActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent arg0) {
+            borderColor = border.getSelectedColor();
+            fillColor = fill.getSelectedColor();
+            System.out.println("Oval listener");
+            fabrica = new FabricaOval();
+            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+            paintPan.clearCoords();
+        }
+    }
+    class BtnRectangleActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent arg0) {
+            borderColor = border.getSelectedColor();
+            fillColor = fill.getSelectedColor();
+            System.out.println("Rectangle listener");
+            fabrica = new FabricaRectangle();
             ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
             paintPan.clearCoords();
         }
