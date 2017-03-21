@@ -1,6 +1,5 @@
 package paintShapes;
 
-import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -18,9 +17,9 @@ public class Square extends Shapes {
             int width = Math.abs(arr[1].x - arr[0].x);
             int heigth = Math.abs(arr[1].y - arr[0].y);
             graphics.setColor(this.getFillrCol());
-            graphics.fillRect(arr[0].x, arr[0].y, width, heigth);
+            graphics.fillRect(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
             graphics.setColor(this.getBorderCol());
-            graphics.drawRect(arr[0].x, arr[0].y, width, heigth);
+            graphics.drawRect(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
         }
 
     }

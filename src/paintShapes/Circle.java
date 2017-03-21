@@ -16,9 +16,9 @@ public class Circle extends Shapes {
             int width = Math.abs(arr[1].x - arr[0].x);
             int heigth = Math.abs(arr[1].y - arr[0].y);
             graphics.setColor(this.getFillrCol());
-            graphics.fillOval(arr[0].x, arr[0].y, width, heigth);
+            graphics.fillOval(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
             graphics.setColor(this.getBorderCol());
-            graphics.drawOval(arr[0].x, arr[0].y, width, heigth);
+            graphics.drawOval(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
         }
     }
 }

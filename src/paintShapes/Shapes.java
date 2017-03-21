@@ -40,4 +40,11 @@ public abstract class Shapes {
         return coords;
     }
     public abstract void draw(Graphics graphics);
+    public int getMin(int a, int b){
+        if (a < b){
+            return a;
+        } else {
+            return b;
+        }
+    }
 }

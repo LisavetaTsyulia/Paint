@@ -1,5 +1,6 @@
 package paintField;
 
+import fabrica.Fabrica;
 import paintShapes.*;
 import paintShapes.Polygon;
 
@@ -21,28 +22,14 @@ public class ShapesList {
     private ShapesList() {
     }
 
-    public void addShape(String type, Color bcl, Color fcl, ArrayList<Point> pointArrayList){
-        Shapes newShape = createShape(type);
+    public void addShape(Fabrica fabrica, Color bcl, Color fcl, ArrayList<Point> pointArrayList){
+        Shapes newShape = fabrica.createShape();
         newShape.setBorderCol(bcl);
         newShape.setFillCol(fcl);
         newShape.setName("Sh" + list.size());
         newShape.setCoords(pointArrayList);
         list.add(newShape);
         showList();
-    }
-    //fabric method
-    public Shapes createShape(String type){
-        Shapes sh = null;
-        if (type.equals("line")){
-            sh = new Line();
-        } else if (type.equals("square")){
-            sh = new Square();
-        } else if (type.equals("circle")){
-            sh = new Circle();
-        } else if (type.equals("polygon")){
-            sh = new Polygon();
-        }
-        return sh;
     }
 
     public void drawList(Graphics graphics){

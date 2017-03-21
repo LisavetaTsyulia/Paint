@@ -1,5 +1,6 @@
 package paintField;
 
+import fabrica.*;
 import paintStyles.ColorChooserButton;
 import paintStyles.CustomizedButtonUI;
 
@@ -19,7 +20,7 @@ public class MenuPan extends JPanel{
     private ColorChooserButton border;
     private ColorChooserButton fill;
     private PaintPan paintPan;
-
+    Fabrica fabrica;
 
     public void setMenu(PaintPan pan){
         paintPan = pan;
@@ -70,7 +71,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Square listener");
-            ShapesList.getInstance().addShape("square", borderColor, fillColor, paintPan.coords);
+            fabrica = new FabricaSquare();
+            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
             paintPan.clearCoords();
         }
     }
@@ -79,7 +81,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Circle listener");
-            ShapesList.getInstance().addShape("circle", borderColor, fillColor,  paintPan.coords);
+            fabrica = new FabricaCircle();
+            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor,  paintPan.coords);
             paintPan.clearCoords();
         }
     }
@@ -88,7 +91,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Line listener");
-            ShapesList.getInstance().addShape("line", borderColor, fillColor, paintPan.coords);
+            fabrica = new FabricaLine();
+            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
             paintPan.clearCoords();
         }
     }
@@ -97,7 +101,8 @@ public class MenuPan extends JPanel{
             borderColor = border.getSelectedColor();
             fillColor = fill.getSelectedColor();
             System.out.println("Polygon listener");
-            ShapesList.getInstance().addShape("polygon", borderColor, fillColor, paintPan.coords);
+            fabrica = new FabricaPolygon();
+            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
             paintPan.clearCoords();
         }
     }
