@@ -7,4 +7,5 @@ import paintShapes.Shapes;
  */
 public abstract class Fabrica {
     public abstract Shapes createShape();
+    public abstract String getName();
 }

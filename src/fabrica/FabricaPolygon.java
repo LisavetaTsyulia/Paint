@@ -10,4 +10,9 @@ public class FabricaPolygon extends Fabrica {
     public Shapes createShape() {
         return new Polygon();
     }
+
+    @Override
+    public String getName() {
+        return "Polygon";
+    }
 }

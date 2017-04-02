@@ -6,7 +6,6 @@ import java.awt.*;
  * Created by lisa on 11.3.17.
  */
 public class Square extends Shapes {
-
     public void draw( Graphics graphics) {
         Graphics2D graphics2 = setG2D(graphics);
         int i = this.getCoords().size();

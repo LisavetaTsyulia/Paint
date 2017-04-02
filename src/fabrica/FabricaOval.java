@@ -10,4 +10,9 @@ public class FabricaOval extends Fabrica {
     public Shapes createShape() {
         return new Oval();
     }
+
+    @Override
+    public String getName() {
+        return "Oval";
+    }
 }

@@ -26,6 +26,16 @@ public class MainField {
         menuPan.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 3));
         paintPan.addMouseListener(new MyMouseListener(paintPan.coords));
 
+        JMenuBar menubar = new JMenuBar();
+        JMenu menu = new JMenu("functions");
+        JMenuItem serialize = new JMenuItem("save");
+        serialize.addActionListener(new SerializeActionListener());
+        menu.add(serialize);
+        JMenuItem open = new JMenuItem("open");
+        menu.add(open);
+        menubar.add(menu);
+        frm.setJMenuBar(menubar);
+
         frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frm.getContentPane().add(BorderLayout.WEST, menuPan);
         frm.getContentPane().add(BorderLayout.CENTER, paintPan);

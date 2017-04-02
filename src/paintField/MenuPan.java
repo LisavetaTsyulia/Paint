@@ -76,62 +76,75 @@ public class MenuPan extends JPanel{
 
     class BtnSquareActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
-            borderColor = border.getSelectedColor();
-            fillColor = fill.getSelectedColor();
-            System.out.println("Square listener");
-            fabrica = new FabricaSquare();
-            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
-            paintPan.clearCoords();
+            if ( !paintPan.isEmptyCoords() ) {
+                System.out.println(paintPan.coords);
+                borderColor = border.getSelectedColor();
+                fillColor = fill.getSelectedColor();
+                System.out.println("Square listener");
+                fabrica = new FabricaSquare();
+                ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+                paintPan.clearCoords();
+            }
         }
     }
     class BtnCircleActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
-            borderColor = border.getSelectedColor();
-            fillColor = fill.getSelectedColor();
-            System.out.println("Circle listener");
-            fabrica = new FabricaCircle();
-            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor,  paintPan.coords);
-            paintPan.clearCoords();
+            if ( !paintPan.isEmptyCoords() ) {
+                borderColor = border.getSelectedColor();
+                fillColor = fill.getSelectedColor();
+                System.out.println("Circle listener");
+                fabrica = new FabricaCircle();
+                ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+                paintPan.clearCoords();
+            }
         }
     }
     class BtnLineActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
-            borderColor = border.getSelectedColor();
-            fillColor = fill.getSelectedColor();
-            System.out.println("Line listener");
-            fabrica = new FabricaLine();
-            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
-            paintPan.clearCoords();
+            if ( !paintPan.isEmptyCoords() ) {
+                borderColor = border.getSelectedColor();
+                fillColor = fill.getSelectedColor();
+                System.out.println("Line listener");
+                fabrica = new FabricaLine();
+                ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+                paintPan.clearCoords();
+            }
         }
     }
     class BtnPolygonActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
-            borderColor = border.getSelectedColor();
-            fillColor = fill.getSelectedColor();
-            System.out.println("Polygon listener");
-            fabrica = new FabricaPolygon();
-            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
-            paintPan.clearCoords();
+            if ( !paintPan.isEmptyCoords() ) {
+                borderColor = border.getSelectedColor();
+                fillColor = fill.getSelectedColor();
+                System.out.println("Polygon listener");
+                fabrica = new FabricaPolygon();
+                ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+                paintPan.clearCoords();
+            }
         }
     }
     class BtnOvalActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
-            borderColor = border.getSelectedColor();
-            fillColor = fill.getSelectedColor();
-            System.out.println("Oval listener");
-            fabrica = new FabricaOval();
-            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
-            paintPan.clearCoords();
+            if ( !paintPan.isEmptyCoords() ) {
+                borderColor = border.getSelectedColor();
+                fillColor = fill.getSelectedColor();
+                System.out.println("Oval listener");
+                fabrica = new FabricaOval();
+                ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+                paintPan.clearCoords();
+            }
         }
     }
     class BtnRectangleActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
-            borderColor = border.getSelectedColor();
-            fillColor = fill.getSelectedColor();
-            System.out.println("Rectangle listener");
-            fabrica = new FabricaRectangle();
-            ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
-            paintPan.clearCoords();
+            if ( !paintPan.isEmptyCoords() ) {
+                borderColor = border.getSelectedColor();
+                fillColor = fill.getSelectedColor();
+                System.out.println("Rectangle listener");
+                fabrica = new FabricaRectangle();
+                ShapesList.getInstance().addShape(fabrica, borderColor, fillColor, paintPan.coords);
+                paintPan.clearCoords();
+            }
         }
     }
 

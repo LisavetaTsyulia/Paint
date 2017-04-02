@@ -13,6 +13,12 @@ public class PaintPan extends JPanel {
     public void clearCoords(){
         coords.clear();
     }
+    public boolean isEmptyCoords(){
+        if (coords.size() == 0) {
+             return true;
+        }
+        return false;
+    }
     public void paint(Graphics g){
         g.clearRect (0, 0, this.getWidth(), this.getHeight());
         ShapesList.getInstance().drawList(g);

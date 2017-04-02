@@ -9,4 +9,9 @@ public class FabricaSquare extends Fabrica {
     public Shapes createShape() {
         return new Square();
     }
+
+    @Override
+    public String getName() {
+        return "Square";
+    }
 }

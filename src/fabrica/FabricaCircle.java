@@ -1,7 +1,6 @@
 package fabrica;
 
-import paintShapes.Circle;
-import paintShapes.Shapes;
+import paintShapes.*;
 
 /**
  * Created by lisa on 20.3.17.
@@ -9,5 +8,10 @@ import paintShapes.Shapes;
 public class FabricaCircle extends Fabrica {
     public Shapes createShape() {
         return new Circle();
+    }
+
+    @Override
+    public String getName() {
+        return "Circle";
     }
 }

@@ -2,9 +2,10 @@ package paintField;
 
 import fabrica.Fabrica;
 import paintShapes.*;
-import paintShapes.Polygon;
 
 import java.awt.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -26,7 +27,7 @@ public class ShapesList {
         Shapes newShape = fabrica.createShape();
         newShape.setBorderCol(bcl);
         newShape.setFillCol(fcl);
-        newShape.setName("Sh" + list.size());
+        newShape.setName(fabrica.getName());
         newShape.setCoords(pointArrayList);
         list.add(newShape);
         //showList();
@@ -50,4 +51,36 @@ public class ShapesList {
             System.out.println(sh.getCoords().toString());
         }
     }
+
+    public void serializeList(FileWriter writer) {
+        for (Shapes sh:
+             list) {
+            try {
+                writer.write(toString(sh));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private String toString(Shapes sh) {
+        String result = sh.getName() + "/" + getPointArray(sh) + "/" +
+                        String.valueOf(sh.getFillrCol().getRed()) + "." +
+                        String.valueOf(sh.getFillrCol().getGreen()) + "." +
+                        String.valueOf(sh.getFillrCol().getBlue()) + "/" +
+                        String.valueOf(sh.getBorderCol().getRed()) + "." +
+                        String.valueOf(sh.getBorderCol().getGreen()) + "." +
+                        String.valueOf(sh.getBorderCol().getBlue()) + "\r\n";
+        return result;
+    }
+
+    private String getPointArray( Shapes sh ) {
+        String result = "";
+        for (Point point:
+             sh.getCoords()) {
+            result += (int)point.getX() + "," + (int)point.getY() + ";" ;
+        }
+        return result;
+    }
+
 }

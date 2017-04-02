@@ -10,4 +10,9 @@ public class FabricaLine extends Fabrica {
     public Shapes createShape() {
         return new Line();
     }
+
+    @Override
+    public String getName() {
+        return "Line";
+    }
 }
