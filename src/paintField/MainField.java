@@ -33,6 +33,7 @@ public class MainField {
         menu.add(serialize);
         JMenuItem open = new JMenuItem("open");
         menu.add(open);
+        open.addActionListener(new OpenActionListener());
         menubar.add(menu);
         frm.setJMenuBar(menubar);
 
