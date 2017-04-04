@@ -83,4 +83,14 @@ public class ShapesList {
         return result;
     }
 
+    public Shapes trySelectedShapes(Point point) {
+        Shapes result = null;
+        for ( Shapes sh:
+             list) {
+            if (sh.isSelected(point)) {
+                result = sh;
+            }
+        }
+        return result;
+    }
 }
