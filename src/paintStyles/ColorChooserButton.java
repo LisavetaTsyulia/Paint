@@ -3,7 +3,10 @@ package paintStyles;
 /**
  * Created by lisa on 11.3.17.
  */
+import interfaces.IEditable;
+import interfaces.ISelectable;
 import paintField.ShapesList;
+import paintShapes.Shapes;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -29,11 +32,16 @@ public class ColorChooserButton extends JButton {
             public void actionPerformed(ActionEvent arg0) {
                 Color newColor = JColorChooser.showDialog(null, "Choose a color", current);
                 setSelectedColor(newColor);
-                if (ShapesList.getInstance().getSelectedShape() != null ) {
+                if (ShapesList.getInstance().getSelectedShape() != null &&
+                        ShapesList.getInstance().getSelectedShape() instanceof IEditable) {
+                    Color fill;
+                    Color border;
                     if ( str.equals("Border")) {
-                        ShapesList.getInstance().getSelectedShape().setBorderCol(getSelectedColor());
+                        border = getSelectedColor();
+                        ((IEditable) ShapesList.getInstance().getSelectedShape()).update(null, border);
                     } else {
-                        ShapesList.getInstance().getSelectedShape().setFillCol(getSelectedColor());
+                        fill = getSelectedColor();
+                        ((IEditable) ShapesList.getInstance().getSelectedShape()).update(fill, null);
                     }
                 }
             }

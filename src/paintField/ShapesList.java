@@ -1,6 +1,7 @@
 package paintField;
 
 import fabrica.Fabrica;
+import interfaces.ISelectable;
 import paintShapes.*;
 
 import java.awt.*;
@@ -97,8 +98,10 @@ public class ShapesList {
         Shapes result = null;
         for ( Shapes sh:
              list) {
-            if (sh.isSelected(point)) {
-                result = sh;
+            if (sh instanceof ISelectable) {
+                if ( ((ISelectable) sh ).isSelected(point)) {
+                    result = sh;
+                }
             }
         }
         return result;

@@ -1,5 +1,8 @@
 package paintShapes;
 
+import interfaces.IEditable;
+import interfaces.ISelectable;
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -63,7 +66,5 @@ public abstract class Shapes {
         graphics2.setStroke(new BasicStroke(3));
         return graphics2;
     }
-
-    public abstract boolean isSelected(Point point);
 
 }

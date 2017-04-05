@@ -1,11 +1,14 @@
 package paintShapes;
 
+import interfaces.IEditable;
+import interfaces.ISelectable;
+
 import java.awt.*;
 
 /**
  * Created by lisa on 21.3.17.
  */
-public class Oval extends Shapes {
+public class Oval extends Shapes implements ISelectable, IEditable {
     Point center;
     int rx;
     int ry;
@@ -39,6 +42,16 @@ public class Oval extends Shapes {
             graphics2.setColor(this.getBorderCol());
             graphics2.setStroke(this.getStroke());
             graphics2.drawOval(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y), width, heigth);
+        }
+    }
+
+    @Override
+    public void update(Color fill, Color border) {
+        if (fill != null) {
+            setFillCol(fill);
+        }
+        if (border != null) {
+            setBorderCol(border);
         }
     }
 }

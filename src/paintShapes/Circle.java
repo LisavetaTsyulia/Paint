@@ -1,13 +1,17 @@
 package paintShapes;
 
+import interfaces.IEditable;
+import interfaces.ISelectable;
+
 import java.awt.*;
 
 /**
  * Created by lisa on 11.3.17.
  */
-public class Circle extends Shapes {
+public class Circle extends Shapes implements ISelectable, IEditable{
     int radius ;
     Point center;
+
     public void draw(Graphics graphics) {
         Graphics2D graphics2 = setG2D(graphics);
         int i = getCoords().size();
@@ -38,5 +42,16 @@ public class Circle extends Shapes {
             return true;
         }
         return false;
+    }
+
+
+    @Override
+    public void update(Color fill, Color border) {
+        if (fill != null) {
+            setFillCol(fill);
+        }
+        if (border != null) {
+            setBorderCol(border);
+        }
     }
 }
