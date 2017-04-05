@@ -10,7 +10,7 @@ public class Rectangle extends Shapes{
     Point endPoint;
     @Override
     public boolean isSelected(Point point) {
-        if ((point.getX() >= startPoint.getX()) && (point.getX() >= startPoint.getY()) &&
+        if ((point.getX() >= startPoint.getX()) && (point.getY() >= startPoint.getY()) &&
                 (point.getX() <= endPoint.getX()) && (point.getY() <= endPoint.getY())) {
             return true;
         }

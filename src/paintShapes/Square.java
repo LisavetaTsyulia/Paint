@@ -11,7 +11,7 @@ public class Square extends Shapes {
 
     @Override
     public boolean isSelected(Point point) {
-        if ((point.getX() >= startPoint.getX()) && (point.getX() >= startPoint.getY()) &&
+        if ((point.getX() >= startPoint.getX()) && (point.getY() >= startPoint.getY()) &&
                 (point.getX() <= endPoint.getX()) && (point.getY() <= endPoint.getY())) {
             return true;
         }
@@ -29,8 +29,8 @@ public class Square extends Shapes {
             int width = Math.abs(arr[1].x - arr[0].x);
             int heigth = Math.abs(arr[1].y - arr[0].y);
             startPoint = new Point(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y));
-            endPoint = new Point(getMin(arr[0].x, arr[1].x) + width,
-                                    getMin(arr[0].y, arr[1].y) + heigth);
+            endPoint = new Point(getMin(arr[0].x, arr[1].x) + getMin(width, heigth),
+                                    getMin(arr[0].y, arr[1].y) + getMin(width, heigth));
             graphics2.setColor(this.getFillrCol());
             graphics2.fillRect(getMin(arr[0].x, arr[1].x), getMin(arr[0].y, arr[1].y),
                                             getMin(width, heigth), getMin(width, heigth));

@@ -14,6 +14,16 @@ import java.util.ArrayList;
 public class ShapesList {
     private static ShapesList ourInstance = new ShapesList();
     ArrayList<Shapes> list = new ArrayList<>();
+    private Shapes selectedShape = null;
+
+    public Shapes getSelectedShape() {
+        return selectedShape;
+    }
+
+    public void setSelectedShape(Shapes selectedShape) {
+
+        this.selectedShape = selectedShape;
+    }
 
     public static ShapesList getInstance()
     {

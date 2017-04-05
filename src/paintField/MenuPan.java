@@ -17,10 +17,19 @@ public class MenuPan extends JPanel{
     private JPanel box;
     private Color borderColor = new Color(0x310683);
     private Color fillColor = new Color(0x1B832A);
-    private ColorChooserButton border;
+    private ColorChooserButton borderBtn;
     private ColorChooserButton fill;
     private PaintPan paintPan;
+    public ArrayList<JButton> buttons;
     Fabrica fabrica;
+
+    public ColorChooserButton getBorderBtn() {
+        return borderBtn;
+    }
+
+    public ColorChooserButton getFill() {
+        return fill;
+    }
 
     public void setMenu(PaintPan pan){
         paintPan = pan;
@@ -45,17 +54,15 @@ public class MenuPan extends JPanel{
         JButton rectangle = new JButton("Rectangle");
         rectangle.addActionListener(new BtnRectangleActionListener());
 
-
-        //JButton border = new JButton("Border");
-        border = new ColorChooserButton(borderColor, "Border");
+        borderBtn = new ColorChooserButton(borderColor, "Border");
         fill = new ColorChooserButton(fillColor, "Fill");
 
         JButton clear = new JButton("Clear");
         clear.addActionListener(new BtnClearActionListener());
 
         //look
-        ArrayList<JButton> buttons = new ArrayList<>();
-        buttons.add(border);
+        buttons = new ArrayList<>();
+        buttons.add(borderBtn);
         buttons.add(fill);
         buttons.add(circle);
         buttons.add(line);
@@ -78,7 +85,7 @@ public class MenuPan extends JPanel{
         public void actionPerformed(ActionEvent arg0) {
             if ( !paintPan.isEmptyCoords() ) {
                 System.out.println(paintPan.coords);
-                borderColor = border.getSelectedColor();
+                borderColor = borderBtn.getSelectedColor();
                 fillColor = fill.getSelectedColor();
                 System.out.println("Square listener");
                 fabrica = new FabricaSquare();
@@ -90,7 +97,7 @@ public class MenuPan extends JPanel{
     class BtnCircleActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
             if ( !paintPan.isEmptyCoords() ) {
-                borderColor = border.getSelectedColor();
+                borderColor = borderBtn.getSelectedColor();
                 fillColor = fill.getSelectedColor();
                 System.out.println("Circle listener");
                 fabrica = new FabricaCircle();
@@ -102,7 +109,7 @@ public class MenuPan extends JPanel{
     class BtnLineActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
             if ( !paintPan.isEmptyCoords() ) {
-                borderColor = border.getSelectedColor();
+                borderColor = borderBtn.getSelectedColor();
                 fillColor = fill.getSelectedColor();
                 System.out.println("Line listener");
                 fabrica = new FabricaLine();
@@ -114,7 +121,7 @@ public class MenuPan extends JPanel{
     class BtnPolygonActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
             if ( !paintPan.isEmptyCoords() ) {
-                borderColor = border.getSelectedColor();
+                borderColor = borderBtn.getSelectedColor();
                 fillColor = fill.getSelectedColor();
                 System.out.println("Polygon listener");
                 fabrica = new FabricaPolygon();
@@ -126,7 +133,7 @@ public class MenuPan extends JPanel{
     class BtnOvalActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
             if ( !paintPan.isEmptyCoords() ) {
-                borderColor = border.getSelectedColor();
+                borderColor = borderBtn.getSelectedColor();
                 fillColor = fill.getSelectedColor();
                 System.out.println("Oval listener");
                 fabrica = new FabricaOval();
@@ -138,7 +145,7 @@ public class MenuPan extends JPanel{
     class BtnRectangleActionListener implements ActionListener{
         public void actionPerformed(ActionEvent arg0) {
             if ( !paintPan.isEmptyCoords() ) {
-                borderColor = border.getSelectedColor();
+                borderColor = borderBtn.getSelectedColor();
                 fillColor = fill.getSelectedColor();
                 System.out.println("Rectangle listener");
                 fabrica = new FabricaRectangle();
@@ -152,7 +159,7 @@ public class MenuPan extends JPanel{
         public void actionPerformed(ActionEvent e) {
             System.out.println("Clear the screen");
             ShapesList.getInstance().clearList();
+            paintPan.coords.clear();
         }
     }
-
 }

@@ -14,12 +14,6 @@ public class MyMouseListener implements MouseInputListener{
     public MyMouseListener(ArrayList<Point> arrPt){
         listenerPoints = arrPt;
     }
-    public ArrayList<Point> getListenerPoints(){
-        return listenerPoints;
-    }
-    public void clearListenerPoints(){
-        listenerPoints.clear();
-    }
     public void mouseClicked(MouseEvent e) {
         int x = e.getX();
         int y = e.getY();

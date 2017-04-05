@@ -18,7 +18,7 @@ public class Circle extends Shapes {
             }
             int width = Math.abs(arr[1].x - arr[0].x);
             int heigth = Math.abs(arr[1].y - arr[0].y);
-            radius = width / 2;
+            radius = getMin(width, heigth) / 2;
             center = new Point(getMin(arr[0].x, arr[1].x) + radius,
                     getMin(arr[0].y, arr[1].y) + radius);
             graphics2.setColor(this.getFillrCol());

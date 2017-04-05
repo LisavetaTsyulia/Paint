@@ -36,7 +36,10 @@ public class MainField {
         open.addActionListener(new OpenActionListener());
         JMenuItem select = new JMenuItem("select shape");
         menu.add(select);
-        select.addActionListener(new SelectActionListener(paintPan.coords));
+        select.addActionListener(new SelectActionListener(menuPan, paintPan.coords));
+        JMenuItem backToPaint = new JMenuItem("back to paint");
+        menu.add(backToPaint);
+        backToPaint.addActionListener(new BackToPaintListener(menuPan, paintPan.coords));
         menubar.add(menu);
         frm.setJMenuBar(menubar);
 
