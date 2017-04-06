@@ -2,6 +2,7 @@ package paintField;
 
 import fabrica.FabricaList;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,21 +16,25 @@ public class OpenActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         ShapesList.getInstance().clearList();
-        File file = new File("Foo.txt");
-        try (FileInputStream fis = new FileInputStream(file);
-        InputStreamReader isr = new InputStreamReader(fis);
-        BufferedReader br = new BufferedReader(isr)) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                DeserializedObject someShape = parseLine(line);
-                ShapesList.getInstance().addShape(someShape.getFabrica(), someShape.getBorderColor(),
-                someShape.getFillColor(), someShape.getCoords());
+        JFileChooser fileChooser = new JFileChooser();
+        if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            File file = fileChooser.getSelectedFile();
+            try (FileInputStream fis = new FileInputStream(file);
+                 InputStreamReader isr = new InputStreamReader(fis);
+                 BufferedReader br = new BufferedReader(isr)) {
+                String line;
+                while ((line = br.readLine()) != null) {
+                    DeserializedObject someShape = parseLine(line);
+                    ShapesList.getInstance().addShape(someShape.getFabrica(), someShape.getBorderColor(),
+                            someShape.getFillColor(), someShape.getCoords());
+                }
+            } catch (FileNotFoundException e1) {
+                e1.printStackTrace();
+            } catch (IOException e1) {
+                e1.printStackTrace();
             }
-        } catch (FileNotFoundException e1) {
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            e1.printStackTrace();
         }
+
     }
 
     private DeserializedObject parseLine(String line) {
