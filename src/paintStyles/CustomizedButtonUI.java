@@ -4,9 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.plaf.basic.*;
-/**
- * Created by lisa on 11.3.17.
- */
+
 public class CustomizedButtonUI
         extends BasicButtonUI
         implements MouseListener

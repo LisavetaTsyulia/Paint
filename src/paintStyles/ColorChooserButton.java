@@ -1,22 +1,14 @@
 package paintStyles;
 
-/**
- * Created by lisa on 11.3.17.
- */
-import interfaces.IEditable;
-import interfaces.ISelectable;
+import interfaces.Editable;
 import paintField.ShapesList;
-import paintShapes.Shapes;
 
 import java.awt.Color;
-import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 
@@ -33,15 +25,15 @@ public class ColorChooserButton extends JButton {
                 Color newColor = JColorChooser.showDialog(null, "Choose a color", current);
                 setSelectedColor(newColor);
                 if (ShapesList.getInstance().getSelectedShape() != null &&
-                        ShapesList.getInstance().getSelectedShape() instanceof IEditable) {
+                        ShapesList.getInstance().getSelectedShape() instanceof Editable) {
                     Color fill;
                     Color border;
                     if ( str.equals("Border")) {
                         border = getSelectedColor();
-                        ((IEditable) ShapesList.getInstance().getSelectedShape()).update(null, border);
+                        ((Editable) ShapesList.getInstance().getSelectedShape()).update(null, border);
                     } else {
                         fill = getSelectedColor();
-                        ((IEditable) ShapesList.getInstance().getSelectedShape()).update(fill, null);
+                        ((Editable) ShapesList.getInstance().getSelectedShape()).update(fill, null);
                     }
                 }
             }

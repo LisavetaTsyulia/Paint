@@ -1,14 +1,11 @@
 package paintShapes;
 
-import interfaces.IEditable;
-import interfaces.ISelectable;
+import interfaces.Editable;
+import interfaces.Selectable;
 
 import java.awt.*;
 
-/**
- * Created by lisa on 11.3.17.
- */
-public class Square extends Shapes implements ISelectable, IEditable {
+public class Square extends Shape implements Selectable, Editable {
     Point startPoint;
     Point endPoint;
 
@@ -52,6 +49,14 @@ public class Square extends Shapes implements ISelectable, IEditable {
         }
         if (border != null) {
             setBorderCol(border);
+        }
+    }
+
+    @Override
+    public void move(int dx, int dy) {
+        for (Point pt:
+                getCoords()) {
+            pt.move(dx, dy);
         }
     }
 }

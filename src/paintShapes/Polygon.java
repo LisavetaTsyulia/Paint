@@ -1,14 +1,11 @@
 package paintShapes;
 
-import interfaces.IEditable;
-import interfaces.ISelectable;
+import interfaces.Editable;
+import interfaces.Selectable;
 
 import java.awt.*;
 
-/**
- * Created by lisa on 11.3.17.
- */
-public class Polygon extends Shapes implements ISelectable, IEditable {
+public class Polygon extends Shape implements Selectable, Editable {
 
     @Override
     public boolean isSelected(Point point) {
@@ -50,6 +47,13 @@ public class Polygon extends Shapes implements ISelectable, IEditable {
         }
         if (border != null) {
             setBorderCol(border);
+        }
+    }
+    @Override
+    public void move(int dx, int dy) {
+        for (Point pt:
+                getCoords()) {
+            pt = new Point ((int)(pt.getX() + dx),(int) (pt.getY() + dy));
         }
     }
 }

@@ -2,9 +2,7 @@ package interfaces;
 
 import java.awt.*;
 
-/**
- * Created by lisa on 5.4.17.
- */
-public interface IEditable {
+public interface Editable {
     public void update(Color fill, Color border);
+    public void move(int dx, int dy);
 }

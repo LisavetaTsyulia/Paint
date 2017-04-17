@@ -1,14 +1,11 @@
 package paintShapes;
 
-import interfaces.IEditable;
-import interfaces.ISelectable;
+import interfaces.Editable;
+import interfaces.Selectable;
 
 import java.awt.*;
 
-/**
- * Created by lisa on 11.3.17.
- */
-public class Line extends Shapes  implements ISelectable, IEditable{
+public class Line extends Shape implements Selectable, Editable {
     Point pointStart;
     Point pointEnd;
 
@@ -42,6 +39,15 @@ public class Line extends Shapes  implements ISelectable, IEditable{
             graphics2.setStroke(this.getStroke());
             graphics2.drawLine(arr[0].x, arr[0].y, arr[1].x, arr[1].y);
         }
+    }
+
+    @Override
+    public void move(int dx, int dy) {
+            for (Point pt:
+                    getCoords()) {
+                pt.move(dx, dy);
+                System.out.println(pt.getX() + pt.getY());
+            }
     }
 
     @Override

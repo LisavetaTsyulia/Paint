@@ -1,18 +1,20 @@
 package paintField;
 
+import interfaces.Editable;
+
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionAdapter;
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 14.3.17.
- */
-public class MyMouseListener implements MouseInputListener{
+public class MyMouseListener extends MouseMotionAdapter implements MouseInputListener{
     private ArrayList<Point> listenerPoints ;
-    public MyMouseListener(ArrayList<Point> arrPt){
+    private PaintPan paintPan;
+    private Point oldPoint;
+    public MyMouseListener(ArrayList<Point> arrPt, PaintPan paintPan){
         listenerPoints = arrPt;
+        this.paintPan = paintPan;
     }
     public void mouseClicked(MouseEvent e) {
         int x = e.getX();
@@ -23,6 +25,9 @@ public class MyMouseListener implements MouseInputListener{
         listenerPoints.add(pt);
     }
     public void mousePressed(MouseEvent e) {
+        if (ShapesList.getInstance().getSelectedShape() != null) {
+        oldPoint = e.getPoint();
+    }
     }
     public void mouseReleased(MouseEvent e) {
     }
@@ -31,6 +36,12 @@ public class MyMouseListener implements MouseInputListener{
     public void mouseExited(MouseEvent e) {
     }
     public void mouseDragged(MouseEvent e) {
+        if ( ShapesList.getInstance().getSelectedShape() instanceof Editable) {
+            int dx = (int) (e.getX() - oldPoint.getX());
+            int dy = (int) (e.getY() - oldPoint.getY());
+            ((Editable)ShapesList.getInstance().getSelectedShape()).move(dx, dy);
+            paintPan.paint(paintPan.getGraphics());
+        }
     }
     public void mouseMoved(MouseEvent e) {
     }

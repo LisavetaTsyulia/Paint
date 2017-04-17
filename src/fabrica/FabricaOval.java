@@ -1,13 +1,10 @@
 package fabrica;
 
 import paintShapes.Oval;
-import paintShapes.Shapes;
+import paintShapes.Shape;
 
-/**
- * Created by lisa on 21.3.17.
- */
 public class FabricaOval extends Fabrica {
-    public Shapes createShape() {
+    public Shape createShape() {
         return new Oval();
     }
 

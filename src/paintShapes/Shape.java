@@ -1,15 +1,9 @@
 package paintShapes;
 
-import interfaces.IEditable;
-import interfaces.ISelectable;
-
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 11.3.17.
- */
-public abstract class Shapes {
+public abstract class Shape {
     private Stroke stroke = new BasicStroke(3);
     private String name;
     private Color borderCol = new Color(98, 19, 82);

@@ -10,9 +10,6 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.*;
 
-/**
- * Created by lisa on 11.3.17.
- */
 public class MenuPan extends JPanel{
     private JPanel box;
     private Color borderColor = new Color(0x310683);

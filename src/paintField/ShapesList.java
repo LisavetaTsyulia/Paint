@@ -1,27 +1,23 @@
 package paintField;
 
 import fabrica.Fabrica;
-import interfaces.ISelectable;
-import paintShapes.*;
-
+import interfaces.Selectable;
+import paintShapes.Shape;
 import java.awt.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 11.3.17.
- */
 public class ShapesList {
     private static ShapesList ourInstance = new ShapesList();
-    ArrayList<Shapes> list = new ArrayList<>();
-    private Shapes selectedShape = null;
+    ArrayList<Shape> list = new ArrayList<>();
+    private Shape selectedShape = null;
 
-    public Shapes getSelectedShape() {
+    public Shape getSelectedShape() {
         return selectedShape;
     }
 
-    public void setSelectedShape(Shapes selectedShape) {
+    public void setSelectedShape(Shape selectedShape) {
 
         this.selectedShape = selectedShape;
     }
@@ -35,7 +31,7 @@ public class ShapesList {
     }
 
     public void addShape(Fabrica fabrica, Color bcl, Color fcl, ArrayList<Point> pointArrayList){
-        Shapes newShape = fabrica.createShape();
+        Shape newShape = fabrica.createShape();
         newShape.setBorderCol(bcl);
         newShape.setFillCol(fcl);
         newShape.setName(fabrica.getName());
@@ -45,7 +41,7 @@ public class ShapesList {
     }
 
     public void drawList(Graphics graphics){
-        for (Shapes sh:
+        for (Shape sh:
              list) {
             sh.draw(graphics);
         }
@@ -56,7 +52,7 @@ public class ShapesList {
     }
 
     public void showList(){
-        for (Shapes sh:
+        for (Shape sh:
              list) {
             System.out.println(sh.getName());
             System.out.println(sh.getCoords().toString());
@@ -64,7 +60,7 @@ public class ShapesList {
     }
 
     public void serializeList(FileWriter writer) {
-        for (Shapes sh:
+        for (Shape sh:
              list) {
             try {
                 writer.write(toString(sh));
@@ -74,7 +70,7 @@ public class ShapesList {
         }
     }
 
-    private String toString(Shapes sh) {
+    private String toString(Shape sh) {
         String result = sh.getName() + "/" + getPointArray(sh) + "/" +
                         String.valueOf(sh.getFillrCol().getRed()) + "." +
                         String.valueOf(sh.getFillrCol().getGreen()) + "." +
@@ -85,7 +81,7 @@ public class ShapesList {
         return result;
     }
 
-    private String getPointArray( Shapes sh ) {
+    private String getPointArray( Shape sh ) {
         String result = "";
         for (Point point:
              sh.getCoords()) {
@@ -94,12 +90,12 @@ public class ShapesList {
         return result;
     }
 
-    public Shapes trySelectedShapes(Point point) {
-        Shapes result = null;
-        for ( Shapes sh:
+    public Shape trySelectedShapes(Point point) {
+        Shape result = null;
+        for ( Shape sh:
              list) {
-            if (sh instanceof ISelectable) {
-                if ( ((ISelectable) sh ).isSelected(point)) {
+            if (sh instanceof Selectable) {
+                if ( ((Selectable) sh ).isSelected(point)) {
                     result = sh;
                 }
             }

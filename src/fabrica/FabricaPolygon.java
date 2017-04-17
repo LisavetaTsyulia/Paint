@@ -1,13 +1,10 @@
 package fabrica;
 
 import paintShapes.Polygon;
-import paintShapes.Shapes;
+import paintShapes.Shape;
 
-/**
- * Created by lisa on 20.3.17.
- */
 public class FabricaPolygon extends Fabrica {
-    public Shapes createShape() {
+    public Shape createShape() {
         return new Polygon();
     }
 

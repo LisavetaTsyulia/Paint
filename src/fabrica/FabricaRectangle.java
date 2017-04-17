@@ -1,13 +1,10 @@
 package fabrica;
 
 import paintShapes.Rectangle;
-import paintShapes.Shapes;
+import paintShapes.Shape;
 
-/**
- * Created by lisa on 21.3.17.
- */
 public class FabricaRectangle extends Fabrica {
-    public Shapes createShape() {
+    public Shape createShape() {
         return new Rectangle();
     }
 

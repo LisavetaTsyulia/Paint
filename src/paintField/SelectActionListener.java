@@ -6,9 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 3.4.17.
- */
 public class SelectActionListener implements ActionListener {
     ArrayList<Point> coords;
     MenuPan menuPan;

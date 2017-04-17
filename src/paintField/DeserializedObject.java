@@ -5,9 +5,6 @@ import fabrica.Fabrica;
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 2.4.17.
- */
 public class DeserializedObject {
     private String name;
     private Color fillColor;

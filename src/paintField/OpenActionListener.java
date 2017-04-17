@@ -9,9 +9,6 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 2.4.17.
- */
 public class OpenActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

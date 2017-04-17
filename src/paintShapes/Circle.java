@@ -1,14 +1,11 @@
 package paintShapes;
 
-import interfaces.IEditable;
-import interfaces.ISelectable;
+import interfaces.Editable;
+import interfaces.Selectable;
 
 import java.awt.*;
 
-/**
- * Created by lisa on 11.3.17.
- */
-public class Circle extends Shapes implements ISelectable, IEditable{
+public class Circle extends Shape implements Selectable, Editable {
     int radius ;
     Point center;
 
@@ -52,6 +49,15 @@ public class Circle extends Shapes implements ISelectable, IEditable{
         }
         if (border != null) {
             setBorderCol(border);
+        }
+    }
+
+    @Override
+    public void move(int dx, int dy) {
+        for (Point pt:
+             getCoords()) {
+            pt.move(dx, dy);
+            System.out.println(pt.getX() + pt.getY());
         }
     }
 }

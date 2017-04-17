@@ -6,9 +6,6 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
 
-/**
- * Created by lisa on 1.4.17.
- */
 public class SerializeActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {

@@ -6,9 +6,6 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-/**
- * Created by lisa on 11.3.17.
- */
 public class MainField {
     JFrame frm;
     MenuPan menuPan;
@@ -24,7 +21,9 @@ public class MainField {
         paintPan = new PaintPan();
         menuPan.setMenu(paintPan);
         menuPan.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 3));
-        paintPan.addMouseListener(new MyMouseListener(paintPan.coords));
+        MyMouseListener myListener = new MyMouseListener(paintPan.coords, paintPan);
+        paintPan.addMouseListener(myListener);
+        paintPan.addMouseMotionListener(myListener);
 
         JMenuBar menubar = new JMenuBar();
         JMenu menu = new JMenu("functions");

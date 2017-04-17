@@ -1,16 +1,11 @@
 package paintField;
 
-import paintShapes.Shapes;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 4.4.17.
- */
 public class BackToPaintListener implements ActionListener {
     ArrayList<Point> coords;
     MenuPan menuPan;
