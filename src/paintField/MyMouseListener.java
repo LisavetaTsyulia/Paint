@@ -27,20 +27,24 @@ public class MyMouseListener extends MouseMotionAdapter implements MouseInputLis
     public void mousePressed(MouseEvent e) {
         if (ShapesList.getInstance().getSelectedShape() != null) {
         oldPoint = e.getPoint();
-    }
+        ShapesList.getInstance().status = "changed";
+        }
     }
     public void mouseReleased(MouseEvent e) {
+        if (!(ShapesList.getInstance().getSelectedShape() == null))
+            ShapesList.getInstance().status = "stop";
     }
     public void mouseEntered(MouseEvent e) {
     }
     public void mouseExited(MouseEvent e) {
     }
     public void mouseDragged(MouseEvent e) {
-        if ( ShapesList.getInstance().getSelectedShape() instanceof Editable) {
+        if ( ShapesList.getInstance().getSelectedShape() instanceof Editable && !ShapesList.getInstance().getSelectedShape().equals(null)) {
             int dx = (int) (e.getX() - oldPoint.getX());
             int dy = (int) (e.getY() - oldPoint.getY());
+            oldPoint.setLocation(oldPoint.getX() + dx, oldPoint.getY() + dy);
+
             ((Editable)ShapesList.getInstance().getSelectedShape()).move(dx, dy);
-            paintPan.paint(paintPan.getGraphics());
         }
     }
     public void mouseMoved(MouseEvent e) {

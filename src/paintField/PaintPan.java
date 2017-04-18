@@ -6,6 +6,9 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class PaintPan extends JPanel {
+    public PaintPan() {
+        new MyThreadHandler(this).start();
+    }
     public ArrayList<Point> coords = new ArrayList<>();
     public void clearCoords(){
         coords.clear();

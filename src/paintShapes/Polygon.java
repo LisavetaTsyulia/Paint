@@ -2,6 +2,7 @@ package paintShapes;
 
 import interfaces.Editable;
 import interfaces.Selectable;
+import paintField.ShapesList;
 
 import java.awt.*;
 
@@ -53,7 +54,10 @@ public class Polygon extends Shape implements Selectable, Editable {
     public void move(int dx, int dy) {
         for (Point pt:
                 getCoords()) {
-            pt = new Point ((int)(pt.getX() + dx),(int) (pt.getY() + dy));
+            Point newPt = new Point(getCoords().get(getCoords().indexOf(pt)).x + dx,
+                    getCoords().get(getCoords().indexOf(pt)).y + dy);
+            getCoords().set(getCoords().indexOf(pt), newPt);
+            ShapesList.getInstance().status = "changed";
         }
     }
 }

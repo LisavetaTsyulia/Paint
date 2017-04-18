@@ -12,6 +12,7 @@ public class ShapesList {
     private static ShapesList ourInstance = new ShapesList();
     ArrayList<Shape> list = new ArrayList<>();
     private Shape selectedShape = null;
+    public String status = "";
 
     public Shape getSelectedShape() {
         return selectedShape;

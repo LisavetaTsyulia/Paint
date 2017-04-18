@@ -2,15 +2,17 @@ package paintShapes;
 
 import interfaces.Editable;
 import interfaces.Selectable;
+import paintField.ShapesList;
 
 import java.awt.*;
 
 public class Circle extends Shape implements Selectable, Editable {
     int radius ;
     Point center;
+    Graphics2D graphics2 ;
 
     public void draw(Graphics graphics) {
-        Graphics2D graphics2 = setG2D(graphics);
+        graphics2 = setG2D(graphics);
         int i = getCoords().size();
         if (i >= 2) {
             Point [] arr = new Point[2];
@@ -55,9 +57,11 @@ public class Circle extends Shape implements Selectable, Editable {
     @Override
     public void move(int dx, int dy) {
         for (Point pt:
-             getCoords()) {
-            pt.move(dx, dy);
-            System.out.println(pt.getX() + pt.getY());
+                getCoords()) {
+            Point newPt = new Point(getCoords().get(getCoords().indexOf(pt)).x + dx,
+                    getCoords().get(getCoords().indexOf(pt)).y + dy);
+            getCoords().set(getCoords().indexOf(pt), newPt);
+            ShapesList.getInstance().status = "changed";
         }
     }
 }
