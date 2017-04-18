@@ -2,46 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17c7a439-b4d0-46b9-a4f0-41b05deeda32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/paintField/MyThreadHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/fabrica/Fabrica.class" afterPath="$PROJECT_DIR$/out/production/Paint/fabrica/Fabrica.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaCircle.class" afterPath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaCircle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaLine.class" afterPath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaLine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaOval.class" afterPath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaOval.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaPolygon.class" afterPath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaPolygon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaRectangle.class" afterPath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaRectangle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaSquare.class" afterPath="$PROJECT_DIR$/out/production/Paint/fabrica/FabricaSquare.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MainField.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MainField.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnCircleActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnCircleActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnClearActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnClearActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnLineActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnLineActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnOvalActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnOvalActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnPolygonActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnPolygonActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnRectangleActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnRectangleActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnSquareActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan$BtnSquareActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MenuPan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/MyMouseListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/MyMouseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/PaintPan.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/PaintPan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/SerializeActionListener.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/SerializeActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintField/ShapesList.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintField/ShapesList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintShapes/Circle.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintShapes/Circle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintShapes/Line.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintShapes/Line.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintShapes/Oval.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintShapes/Oval.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintShapes/Polygon.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintShapes/Polygon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintShapes/Rectangle.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintShapes/Rectangle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintShapes/Square.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintShapes/Square.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintStyles/ColorChooserButton$1.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintStyles/ColorChooserButton$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintStyles/ColorChooserButton.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintStyles/ColorChooserButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Paint/paintStyles/CustomizedButtonUI.class" afterPath="$PROJECT_DIR$/out/production/Paint/paintStyles/CustomizedButtonUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintField/MyMouseListener.java" afterPath="$PROJECT_DIR$/src/paintField/MyMouseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintField/PaintPan.java" afterPath="$PROJECT_DIR$/src/paintField/PaintPan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintField/ShapesList.java" afterPath="$PROJECT_DIR$/src/paintField/ShapesList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintShapes/Circle.java" afterPath="$PROJECT_DIR$/src/paintShapes/Circle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintShapes/Line.java" afterPath="$PROJECT_DIR$/src/paintShapes/Line.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintShapes/Oval.java" afterPath="$PROJECT_DIR$/src/paintShapes/Oval.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintShapes/Polygon.java" afterPath="$PROJECT_DIR$/src/paintShapes/Polygon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintShapes/Rectangle.java" afterPath="$PROJECT_DIR$/src/paintShapes/Rectangle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintShapes/Square.java" afterPath="$PROJECT_DIR$/src/paintShapes/Square.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/paintField/SelectActionListener.java" afterPath="$PROJECT_DIR$/src/paintField/SelectActionListener.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,40 +23,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShapesList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paintField/ShapesList.java">
+      <file leaf-file-name="SelectActionListener.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/paintField/SelectActionListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-972">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="275">
+              <caret line="30" column="95" lean-forward="false" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaintPan.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paintField/PaintPan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="e#153#154#0" expanded="true" />
-                <element signature="e#202#203#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyThreadHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/paintField/MyThreadHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -103,7 +38,7 @@
       <file leaf-file-name="Circle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paintShapes/Circle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="1152">
               <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -142,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Square.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Square.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/paintShapes/Square.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="331">
@@ -157,6 +92,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paintField/MainField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-461">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuPan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/paintField/MenuPan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="95" column="46" lean-forward="false" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -222,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/paintField/DeserializedObject.java" />
         <option value="$PROJECT_DIR$/src/paintField/MenuPan.java" />
         <option value="$PROJECT_DIR$/src/paintField/OpenActionListener.java" />
-        <option value="$PROJECT_DIR$/src/paintField/SelectActionListener.java" />
         <option value="$PROJECT_DIR$/src/paintField/SerializeActionListener.java" />
         <option value="$PROJECT_DIR$/src/paintShapes/Shape.java" />
         <option value="$PROJECT_DIR$/src/paintStyles/ColorChooserButton.java" />
@@ -237,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/paintShapes/Polygon.java" />
         <option value="$PROJECT_DIR$/src/paintShapes/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/paintShapes/Square.java" />
+        <option value="$PROJECT_DIR$/src/paintField/SelectActionListener.java" />
       </list>
     </option>
   </component>
@@ -847,12 +802,12 @@
       <workItem from="1491752175991" duration="112000" />
       <workItem from="1492441029030" duration="2353000" />
       <workItem from="1492445401158" duration="3441000" />
-      <workItem from="1492498652174" duration="3843000" />
+      <workItem from="1492498652174" duration="4735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134309000" />
+    <option name="totallyTimeSpent" value="135201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="21" width="1309" height="747" extended-state="6" />
@@ -1171,16 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paintField/SelectActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fabrica/Fabrica.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1197,28 +1142,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paintField/MainField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paintField/MenuPan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-961">
-          <caret line="95" column="46" lean-forward="false" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/awt/Component.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="2449" column="0" lean-forward="false" selection-start-line="2449" selection-start-column="0" selection-end-line="2449" selection-end-column="0" />
           <folding>
-            <element signature="e#84684#84685#0" expanded="true" />
+            <element signature="e#84684#84685#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1290,16 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/paintShapes/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/paintShapes/Oval.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1329,6 +1248,42 @@
         <state relative-caret-position="331">
           <caret line="63" column="9" lean-forward="false" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paintShapes/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paintField/MenuPan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="95" column="46" lean-forward="false" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paintField/MainField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-461">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/paintField/SelectActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="30" column="95" lean-forward="false" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

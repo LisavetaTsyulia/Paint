@@ -27,6 +27,8 @@ public class SelectActionListener implements ActionListener {
                     if (!btn.getText().equals("Fill") && !btn.getText().equals("Border"))
                         btn.setEnabled(false);
                 }
+                ShapesList.getInstance().list.remove(ShapesList.getInstance().getSelectedShape());
+                ShapesList.getInstance().list.add(ShapesList.getInstance().getSelectedShape());
             }
             coords.clear();
         }
