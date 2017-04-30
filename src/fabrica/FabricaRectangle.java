@@ -4,6 +4,10 @@ import paintShapes.Rectangle;
 import paintShapes.Shape;
 
 public class FabricaRectangle extends Fabrica {
+    public FabricaRectangle() {
+        setName("Rectangle");
+    }
+
     public Shape createShape() {
         return new Rectangle();
     }
@@ -11,5 +15,10 @@ public class FabricaRectangle extends Fabrica {
     @Override
     public String getName() {
         return "Rectangle";
+    }
+
+    @Override
+    public void setName(String name) {
+        fabricaName = name;
     }
 }

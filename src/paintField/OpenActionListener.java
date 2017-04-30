@@ -43,7 +43,7 @@ public class OpenActionListener implements ActionListener {
 
         DeserializedObject someShape = new DeserializedObject();
         someShape.setName( name );
-
+        System.out.println(name);
         String[] borderColorArray = borderColor.split("\\.");
         int borderRed = Integer.parseInt(borderColorArray[0]);
         int borderGreen = Integer.parseInt(borderColorArray[1]);

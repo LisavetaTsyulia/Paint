@@ -2,9 +2,6 @@ package fabrica;
 
 import java.util.ArrayList;
 
-/**
- * Created by lisa on 2.4.17.
- */
 public class FabricaList {
     private static FabricaList ourInstance = new FabricaList();
 
@@ -14,12 +11,16 @@ public class FabricaList {
     }
 
     private FabricaList() {
-        fabricaList.add(new FabricaCircle());
+        //fabricaList.add(new FabricaCircle());
         fabricaList.add(new FabricaRectangle());
         fabricaList.add(new FabricaLine());
         fabricaList.add(new FabricaOval());
         fabricaList.add(new FabricaPolygon());
         fabricaList.add(new FabricaSquare());
+    }
+
+    public void addFabrica(Fabrica fabrica) {
+        fabricaList.add(fabrica);
     }
 
     public Fabrica chooseFabrica(String name) {
